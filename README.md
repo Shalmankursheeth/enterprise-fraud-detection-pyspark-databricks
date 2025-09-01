@@ -23,13 +23,13 @@ A **production-ready, scalable fraud detection pipeline** built on **Databricks*
 ## 🗺 Architecture
 
 ### **Mermaid Flow (renders in GitHub)**
-
 ```mermaid
 flowchart LR
     A[Raw Transactions CSV] --> B[PySpark ETL & Feature Engineering]
     B --> C[Vectorization]
     C --> D[LightGBM Training]
-    D --> E[Model Evaluation<br/>(AUC, Accuracy, Confusion Matrix)]
+    D --> E[Model Evaluation (AUC, Accuracy, Confusion Matrix)]
     D --> F[SHAP Explainability]
-    D --> G[Model Export<br/>fraud_model.pkl]
-    G --> H[FastAPI Microservice<br/>Deployment Ready]
+    D --> G[Model Export (fraud_model.pkl)]
+    G --> H[FastAPI Microservice Deployment]
+
