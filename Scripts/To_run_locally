@@ -6,3 +6,8 @@ pip install -r requirements.txt
 
 # 3. Start API
 uvicorn scripts.app:app --host 0.0.0.0 --port 8000 --reload
+
+# Test 
+curl -X POST "http://127.0.0.1:8000/predict" \
+    -H "Content-Type: application/json" \
+    -d '{"transactions": [[0.1, -0.5, 1.2, -0.7, 0.3, ..., 100.0]]}'
